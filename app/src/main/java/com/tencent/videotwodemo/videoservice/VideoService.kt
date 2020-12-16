@@ -134,6 +134,7 @@ class VideoService : Service(), IVideo {
             layout_float.setOnClickListener {
                 layout_float.removeAllViews()
                 val eee = Intent(this@VideoService, VideoActivity::class.java)
+                eee.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK )
                 eee.putExtra("from", "Service")
                 startActivity(eee)
             }

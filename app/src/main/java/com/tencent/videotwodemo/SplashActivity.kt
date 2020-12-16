@@ -27,7 +27,6 @@ class SplashActivity : AppCompatActivity() {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             ).subscribe({
                 if (it) {
-
                     startActivity(Intent(this, VideoActivity::class.java))
                 } else {
                     Toast.makeText(this, "请给权限", Toast.LENGTH_LONG).show()
